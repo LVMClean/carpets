@@ -1,0 +1,1042 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LVM Cleaning and Maintenance | Carpet Cleaning</title>
+
+  <style>
+    :root {
+      --green: #169947;
+      --green-dark: #0f6f34;
+      --soft-bg: #e7e4de;
+      --white: #ffffff;
+      --text: #1e1e1e;
+      --muted: #666666;
+      --card: #f8f7f4;
+      --border: #d7d2c9;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--soft-bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .top-cta {
+      background: var(--green);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .top-cta-inner {
+      width: min(1120px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .top-cta strong {
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    .top-cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .top-cta-actions a {
+      background: var(--white);
+      color: var(--green);
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.25s ease;
+    }
+
+    .top-cta-actions a:hover {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    header {
+      background: rgba(231, 228, 222, 0.96);
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 51px;
+      z-index: 9998;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: clamp(28px, 4vw, 50px);
+      color: var(--green);
+      font-weight: 400;
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 15px;
+      color: var(--text);
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .hero {
+      padding: 80px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.25s ease;
+      border: 2px solid var(--green);
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+    }
+
+    .btn-outline {
+      color: var(--green);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .image-panel {
+      background: var(--white);
+      border-radius: 32px;
+      padding: 16px;
+      box-shadow: 0 18px 40px var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image {
+      height: 390px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 24px;
+    }
+
+    .accreditation-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .accreditation-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .logo-placeholder {
+      min-height: 88px;
+      border-radius: 18px;
+      border: 2px dashed var(--border);
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 12px;
+    }
+
+    .accreditation-card h3 {
+      color: var(--green);
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .accreditation-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 34px;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .service-card ul {
+      margin-top: 18px;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .service-card li {
+      margin-bottom: 8px;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .package-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .package-card.featured {
+      border: 2px solid var(--green);
+      box-shadow: 0 18px 35px rgba(22, 153, 71, 0.16);
+    }
+
+    .tag-row {
+      height: 42px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .package-card h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+
+    .package-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      min-height: 54px;
+    }
+
+    .price {
+      font-size: 34px;
+      color: var(--green);
+      font-weight: bold;
+      margin: 10px 0 22px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .price span {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: normal;
+      letter-spacing: 0;
+    }
+
+    .package-card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .package-card li {
+      margin-bottom: 8px;
+    }
+
+    .package-card .btn {
+      margin-top: auto;
+      width: fit-content;
+    }
+
+    .coverage-banner {
+      background: var(--green);
+      color: var(--white);
+      border-radius: 32px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .coverage-banner h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+
+    .coverage-banner p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 18px;
+    }
+
+    .coverage-list {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .coverage-list ul {
+      padding-left: 20px;
+    }
+
+    .coverage-list li {
+      margin-bottom: 10px;
+    }
+
+    .trusted-section {
+      padding-top: 20px;
+    }
+
+    .trusted-strip {
+      background: var(--white);
+      border-radius: 32px;
+      padding: 34px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .trusted-strip h2 {
+      text-align: center;
+      color: var(--green);
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -1.5px;
+      margin-bottom: 28px;
+    }
+
+    .trusted-logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .trusted-logo {
+      min-height: 120px;
+      border-radius: 22px;
+      border: 2px dashed var(--border);
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    .contact {
+      background: var(--white);
+      border-radius: 36px;
+      padding: 45px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      color: var(--green);
+      font-size: 36px;
+      margin-bottom: 16px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-info a {
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 15px;
+      background: var(--card);
+      color: var(--text);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(22, 153, 71, 0.3);
+      border-color: var(--green);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      header {
+        top: 74px;
+      }
+
+      .hero-grid,
+      .services-grid,
+      .coverage-banner,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-card p {
+        min-height: auto;
+      }
+
+      .tag-row {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .top-cta {
+        position: sticky;
+        top: 0;
+      }
+
+      .top-cta-inner {
+        justify-content: center;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .top-cta-actions {
+        justify-content: center;
+        width: 100%;
+      }
+
+      header {
+        position: relative;
+        top: auto;
+      }
+
+      .nav {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .cta-row .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        height: 300px;
+      }
+
+      .accreditation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trusted-logos {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        padding: 28px;
+      }
+
+      .coverage-banner {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-cta">
+    <div class="top-cta-inner">
+      <strong>Book Free Consultation Now</strong>
+
+      <div class="top-cta-actions">
+        <a href="https://wa.me/447973233176" target="_blank">WhatsApp</a>
+        <a href="tel:07973233176">Call Now</a>
+        <a href="mailto:luke@lvmclean.co.uk">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">LVM Cleaning and Maintenance</div>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#packages">Prices</a>
+        <a href="#trusted">Trusted By</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div>
+            <div class="eyebrow">Domestic & Commercial Carpet Cleaning</div>
+
+            <h1>Fresh, professional carpet cleaning across your local area.</h1>
+
+            <p>
+              Professional carpet cleaning for homes and businesses across Lincolnshire,
+              Cambridgeshire, South Norfolk and surrounding areas.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/447973233176" target="_blank">
+                WhatsApp Us
+              </a>
+
+              <a class="btn btn-outline" href="tel:07973233176">
+                Call 07973 233176
+              </a>
+
+              <a class="btn btn-outline" href="mailto:luke@lvmclean.co.uk">
+                Email Luke
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-side">
+
+            <div class="image-panel">
+              <img
+                src="images/lvm_carpets.png"
+                alt="Professional carpet cleaning by LVM Cleaning and Maintenance"
+                class="hero-image"
+              >
+            </div>
+
+            <div class="accreditation-card">
+              <div class="accreditation-grid">
+
+                <div class="logo-placeholder">
+                  Nord Chemicals<br>Logo
+                </div>
+
+                <div>
+                  <h3>Trained & Accredited by Nord Chemicals</h3>
+                  <p>
+                    Professional training and product knowledge to deliver a high-quality,
+                    reliable carpet cleaning service.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Domestic & Commercial Services</h2>
+          <p>
+            Reliable carpet cleaning options for homes, businesses and professional spaces.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <h3>Domestic Carpet Cleaning</h3>
+
+            <p>
+              Ideal for homes, flats, rental properties, end-of-tenancy cleaning,
+              pet-friendly households and general carpet refreshes.
+            </p>
+
+            <ul>
+              <li>Living rooms</li>
+              <li>Bedrooms</li>
+              <li>Hallways, stairs and landings</li>
+              <li>Deodorising options available</li>
+              <li>Protection treatment available</li>
+              <li>Coverage within 30 miles included</li>
+              <li>Over 30 miles charged at £1.20 per mile</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Commercial Carpet Cleaning</h3>
+
+            <p>
+              Professional carpet cleaning for business premises, offices, retail spaces,
+              salons, communal areas and other commercial locations.
+            </p>
+
+            <ul>
+              <li>Office carpet cleaning</li>
+              <li>Retail and customer-facing spaces</li>
+              <li>Salons and treatment rooms</li>
+              <li>Communal and high-traffic areas</li>
+              <li>Flexible quotes based on site size</li>
+              <li>Commercial travel distance available on request</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-title">
+          <h2>Prices from</h2>
+          <p>
+            Choose the level of clean that suits your home, rental property or commercial space.
+          </p>
+        </div>
+
+        <div class="package-grid">
+
+          <div class="package-card">
+            <div class="tag-row"></div>
+
+            <h3>Basic</h3>
+            <p>Standard professional carpet clean.</p>
+
+            <div class="price">From £XX <span>/ room</span></div>
+
+            <ul>
+              <li>Standard carpet clean</li>
+              <li>Professional machines</li>
+              <li>Professional-grade chemicals</li>
+              <li>Suitable for general maintenance cleans</li>
+            </ul>
+
+            <a class="btn btn-outline" href="#contact">Enquire Now</a>
+          </div>
+
+          <div class="package-card featured">
+            <div class="tag-row">
+              <span class="tag">Most Popular</span>
+            </div>
+
+            <h3>Premium</h3>
+            <p>Clean and refresh with added fragrance options.</p>
+
+            <div class="price">From £XX <span>/ room</span></div>
+
+            <ul>
+              <li>Everything included in Basic</li>
+              <li>Choice of carpet deodoriser</li>
+              <li>Choice of home deodoriser</li>
+              <li>Ideal for homes with pets, children or odours</li>
+            </ul>
+
+            <a class="btn btn-primary" href="#contact">Book Premium</a>
+          </div>
+
+          <div class="package-card">
+            <div class="tag-row"></div>
+
+            <h3>Premium Protect</h3>
+            <p>Full clean, refresh and added protection treatment.</p>
+
+            <div class="price">From £XX <span>/ room</span></div>
+
+            <ul>
+              <li>Everything included in Premium</li>
+              <li>Protection treatment included</li>
+              <li>Helps protect carpet fibres</li>
+              <li>Ideal for busy homes and high-traffic areas</li>
+            </ul>
+
+            <a class="btn btn-outline" href="#contact">Get a Quote</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="coverage-banner">
+
+          <div>
+            <h2>Covering Lincolnshire, Cambridgeshire & South Norfolk</h2>
+
+            <p>
+              LVM Cleaning and Maintenance provides domestic and commercial carpet cleaning
+              across the surrounding areas, with clear travel terms for domestic bookings
+              and commercial quotes handled individually.
+            </p>
+          </div>
+
+          <div class="coverage-list">
+            <ul>
+              <li>Domestic jobs covered within 30 miles</li>
+              <li>Additional domestic distance charged at £1.20 per mile</li>
+              <li>Commercial distance quoted on request</li>
+              <li>Professional machines and products used</li>
+              <li>Appointments available 8:00am – 5:00pm</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="trusted" class="trusted-section">
+      <div class="container">
+        <div class="trusted-strip">
+          <h2>Trusted by</h2>
+
+          <div class="trusted-logos">
+
+            <div class="trusted-logo">
+              Company Logo 1
+            </div>
+
+            <div class="trusted-logo">
+              Company Logo 2
+            </div>
+
+            <div class="trusted-logo">
+              Company Logo 3
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <h3>Get a free quote</h3>
+
+            <p>
+              Send a message with your location, the rooms you need cleaned and whether
+              you would like Basic, Premium or Premium Protect.
+            </p>
+
+            <p>
+              <strong>Opening Hours:</strong>
+              Monday to Saturday, 8:00am – 5:00pm
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:07973233176">07973 233176</a>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:luke@lvmclean.co.uk">luke@lvmclean.co.uk</a>
+            </p>
+
+            <p>
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/447973233176" target="_blank">Message on WhatsApp</a>
+            </p>
+
+            <p>
+              <strong>Facebook:</strong>
+              <a href="#" target="_blank">Add Facebook page link here</a>
+            </p>
+
+            <div class="cta-row" style="margin-top: 22px;">
+              <a class="btn btn-primary" href="https://wa.me/447973233176" target="_blank">
+                WhatsApp
+              </a>
+
+              <a class="btn btn-outline" href="mailto:luke@lvmclean.co.uk">
+                Email
+              </a>
+            </div>
+          </div>
+
+          <form action="mailto:luke@lvmclean.co.uk" method="post" enctype="text/plain">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            >
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              required
+            >
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+            >
+
+            <input
+              type="text"
+              name="location"
+              placeholder="Your location / postcode"
+            >
+
+            <select name="service">
+              <option value="">Select a service</option>
+              <option value="Domestic Basic">Domestic - Basic</option>
+              <option value="Domestic Premium">Domestic - Premium</option>
+              <option value="Domestic Premium Protect">Domestic - Premium Protect</option>
+              <option value="Commercial">Commercial quote</option>
+            </select>
+
+            <textarea
+              name="message"
+              placeholder="Tell us what you need cleaned, number of rooms, stains, pets, parking access, and preferred dates."
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">
+              Send Enquiry
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 LVM Cleaning and Maintenance. Carpet cleaning across Lincolnshire, Cambridgeshire, South Norfolk and surrounding areas.
+    </div>
+  </footer>
+
+</body>
+</html>
