@@ -102,8 +102,10 @@
       background: rgba(231, 228, 222, 0.96);
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
-      position: relative;
-      z-index: 10;
+      position: sticky;
+      top: 51px;
+      z-index: 9998;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
@@ -193,12 +195,13 @@
 
     .btn-primary {
       background: var(--green);
-      color: var(--white);
+      color: var(--white) !important;
     }
 
     .btn-primary:hover {
       background: var(--green-dark);
       border-color: var(--green-dark);
+      color: var(--white) !important;
     }
 
     .btn-outline {
@@ -209,6 +212,18 @@
     .btn-outline:hover {
       background: var(--green);
       color: var(--white);
+    }
+
+    .whatsapp-bottom {
+      background: var(--green);
+      color: var(--white) !important;
+      border-color: var(--green);
+    }
+
+    .whatsapp-bottom:hover {
+      background: var(--green-dark);
+      color: var(--white) !important;
+      border-color: var(--green-dark);
     }
 
     .hero-side {
@@ -241,25 +256,23 @@
 
     .accreditation-grid {
       display: grid;
-      grid-template-columns: 130px 1fr;
+      grid-template-columns: 110px 1fr;
       gap: 18px;
       align-items: center;
     }
 
-    .accreditation-logo {
-      background: var(--card);
+    .logo-placeholder {
+      min-height: 88px;
       border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 14px;
+      border: 2px dashed var(--border);
+      background: var(--card);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100px;
-    }
-
-    .accreditation-logo img {
-      max-height: 80px;
-      object-fit: contain;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 12px;
     }
 
     .accreditation-card h3 {
@@ -295,15 +308,6 @@
     .section-title p {
       color: var(--muted);
       font-size: 18px;
-    }
-
-    .price-heading {
-      text-align: center;
-      color: var(--green);
-      font-size: clamp(36px, 5vw, 60px);
-      letter-spacing: -2px;
-      line-height: 1;
-      margin-bottom: 18px;
     }
 
     .services-grid {
@@ -393,6 +397,22 @@
       min-height: 54px;
     }
 
+    .price {
+      font-size: 34px;
+      color: var(--green);
+      font-weight: bold;
+      margin: 10px 0 22px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .price span {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: normal;
+      letter-spacing: 0;
+    }
+
     .package-card ul {
       padding-left: 20px;
       color: var(--muted);
@@ -475,17 +495,15 @@
     .trusted-logo {
       min-height: 120px;
       border-radius: 22px;
-      border: 1px solid var(--border);
+      border: 2px dashed var(--border);
       background: var(--card);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-    }
-
-    .trusted-logo img {
-      max-height: 80px;
-      object-fit: contain;
+      color: var(--muted);
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
     }
 
     .contact {
@@ -563,6 +581,10 @@
     }
 
     @media (max-width: 950px) {
+      header {
+        top: 74px;
+      }
+
       .hero-grid,
       .services-grid,
       .coverage-banner,
@@ -715,7 +737,7 @@
 
             <div class="image-panel">
               <img
-                src="images/lvm_carpets.png"
+                src="images/luke.jpeg"
                 alt="Professional carpet cleaning by LVM Cleaning and Maintenance"
                 class="hero-image"
               >
@@ -724,8 +746,8 @@
             <div class="accreditation-card">
               <div class="accreditation-grid">
 
-                <div class="accreditation-logo">
-                  <img src="nordchem_image.png" alt="Nord Chemicals logo">
+                <div class="logo-placeholder">
+                  Nord Chemicals<br>Logo
                 </div>
 
                 <div>
@@ -801,7 +823,7 @@
     <section id="packages">
       <div class="container">
         <div class="section-title">
-          <h2 class="price-heading">Prices from £86</h2>
+          <h2>Prices from</h2>
           <p>
             Choose the level of clean that suits your home, rental property or commercial space.
           </p>
@@ -814,6 +836,8 @@
 
             <h3>Basic</h3>
             <p>Standard professional carpet clean.</p>
+
+            <div class="price">From £XX <span>/ room</span></div>
 
             <ul>
               <li>Standard carpet clean</li>
@@ -833,6 +857,8 @@
             <h3>Premium</h3>
             <p>Clean and refresh with added fragrance options.</p>
 
+            <div class="price">From £XX <span>/ room</span></div>
+
             <ul>
               <li>Everything included in Basic</li>
               <li>Choice of carpet deodoriser</li>
@@ -840,7 +866,7 @@
               <li>Ideal for homes with pets, children or odours</li>
             </ul>
 
-            <a class="btn btn-primary" href="#contact">Enquire Now</a>
+            <a class="btn btn-primary" href="#contact">Book Premium</a>
           </div>
 
           <div class="package-card">
@@ -849,6 +875,8 @@
             <h3>Premium Protect</h3>
             <p>Full clean, refresh and added protection treatment.</p>
 
+            <div class="price">From £XX <span>/ room</span></div>
+
             <ul>
               <li>Everything included in Premium</li>
               <li>Protection treatment included</li>
@@ -856,7 +884,7 @@
               <li>Ideal for busy homes and high-traffic areas</li>
             </ul>
 
-            <a class="btn btn-outline" href="#contact">Enquire Now</a>
+            <a class="btn btn-outline" href="#contact">Get a Quote</a>
           </div>
 
         </div>
@@ -899,15 +927,15 @@
           <div class="trusted-logos">
 
             <div class="trusted-logo">
-              <img src="BD_image.png" alt="BD logo">
+              Company Logo 1
             </div>
 
             <div class="trusted-logo">
-              <img src="JF_image.png" alt="JF logo">
+              Company Logo 2
             </div>
 
             <div class="trusted-logo">
-              <img src="Ravelin_image.png" alt="Ravelin logo">
+              Company Logo 3
             </div>
 
           </div>
@@ -949,11 +977,11 @@
 
             <p>
               <strong>Facebook:</strong>
-              <a href="https://www.facebook.com/profile.php?id=61583526895272" target="_blank">Visit Facebook page</a>
+              <a href="#" target="_blank">Add Facebook page link here</a>
             </p>
 
             <div class="cta-row" style="margin-top: 22px;">
-              <a class="btn btn-primary" href="https://wa.me/447973233176" target="_blank">
+              <a class="btn whatsapp-bottom" href="https://wa.me/447973233176" target="_blank">
                 WhatsApp
               </a>
 
