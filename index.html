@@ -193,12 +193,13 @@
 
     .btn-primary {
       background: var(--green);
-      color: var(--white);
+      color: var(--white) !important;
     }
 
     .btn-primary:hover {
       background: var(--green-dark);
       border-color: var(--green-dark);
+      color: var(--white) !important;
     }
 
     .btn-outline {
@@ -209,10 +210,6 @@
     .btn-outline:hover {
       background: var(--green);
       color: var(--white);
-    }
-
-    .whatsapp-bottom {
-      color: var(--white) !important;
     }
 
     .hero-side {
@@ -342,6 +339,56 @@
 
     .service-card li {
       margin-bottom: 8px;
+    }
+
+    /* BEFORE & AFTER GALLERY */
+
+    .gallery-section {
+      padding: 80px 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .gallery-image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .gallery-image-wrap img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: var(--green);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .package-grid {
@@ -641,6 +688,14 @@
         grid-template-columns: 1fr;
       }
 
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-image-wrap img {
+        height: 320px;
+      }
+
       .trusted-logos {
         grid-template-columns: 1fr;
       }
@@ -660,9 +715,11 @@
 
   <div class="top-cta">
     <div class="top-cta-inner">
+
       <strong>Book Free Consultation Now</strong>
 
       <div class="top-cta-actions">
+
         <a
           href="https://calendar.app.google/K5Q4h1BNmqWmqxmz8"
           target="_blank"
@@ -671,21 +728,49 @@
           Book Consultation
         </a>
 
-        <a href="https://wa.me/447973233176" target="_blank">WhatsApp</a>
-        <a href="tel:07973233176">Call Now</a>
-        <a href="mailto:luke@lvmclean.co.uk">Email</a>
+        <a
+          href="https://wa.me/447973233176"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+        <a href="tel:07973233176">
+          Call Now
+        </a>
+
+        <a href="mailto:luke@lvmclean.co.uk">
+          Email
+        </a>
+
       </div>
     </div>
   </div>
 
   <header>
     <div class="container nav">
-      <div class="logo">LVM Cleaning and Maintenance</div>
+
+      <div class="logo">
+        LVM Cleaning and Maintenance
+      </div>
 
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#packages">Prices</a>
-        <a href="#trusted">Trusted By</a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#gallery">
+          Before & After
+        </a>
+
+        <a href="#packages">
+          Prices
+        </a>
+
+        <a href="#trusted">
+          Trusted By
+        </a>
 
         <a
           href="https://calendar.app.google/K5Q4h1BNmqWmqxmz8"
@@ -695,8 +780,12 @@
           Book Free Consultation
         </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
+
     </div>
   </header>
 
@@ -708,9 +797,14 @@
         <div class="hero-grid">
 
           <div>
-            <div class="eyebrow">Domestic & Commercial Carpet Cleaning</div>
 
-            <h1>Fresh, professional carpet cleaning across your local area.</h1>
+            <div class="eyebrow">
+              Domestic & Commercial Carpet Cleaning
+            </div>
+
+            <h1>
+              Fresh, professional carpet cleaning across your local area.
+            </h1>
 
             <p>
               Professional carpet cleaning for homes and businesses across Lincolnshire,
@@ -728,46 +822,72 @@
                 Book Free Consultation
               </a>
 
-              <a class="btn btn-primary" href="https://wa.me/447973233176" target="_blank">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/447973233176"
+                target="_blank"
+              >
                 WhatsApp Us
               </a>
 
-              <a class="btn btn-outline" href="tel:07973233176">
+              <a
+                class="btn btn-outline"
+                href="tel:07973233176"
+              >
                 Call 07973 233176
               </a>
 
-              <a class="btn btn-outline" href="mailto:luke@lvmclean.co.uk">
+              <a
+                class="btn btn-outline"
+                href="mailto:luke@lvmclean.co.uk"
+              >
                 Email Luke
               </a>
+
             </div>
+
           </div>
 
           <div class="hero-side">
 
             <div class="image-panel">
+
               <img
                 src="luke.jpeg"
                 alt="Professional carpet cleaning by LVM Cleaning and Maintenance"
                 class="hero-image"
               >
+
             </div>
 
             <div class="accreditation-card">
+
               <div class="accreditation-grid">
 
                 <div class="accreditation-logo">
-                  <img src="nordchem_image.png" alt="Nord Chemicals logo">
+
+                  <img
+                    src="nordchem_image.png"
+                    alt="Nord Chemicals logo"
+                  >
+
                 </div>
 
                 <div>
-                  <h3>Trained & Accredited by Nord Chemicals</h3>
+
+                  <h3>
+                    Trained & Accredited by Nord Chemicals
+                  </h3>
+
                   <p>
                     Professional training and product knowledge to deliver a high-quality,
                     reliable carpet cleaning service.
                   </p>
+
                 </div>
 
               </div>
+
             </div>
 
           </div>
@@ -778,18 +898,28 @@
     </section>
 
     <section id="services">
+
       <div class="container">
+
         <div class="section-title">
-          <h2>Domestic & Commercial Services</h2>
+
+          <h2>
+            Domestic & Commercial Services
+          </h2>
+
           <p>
             Reliable carpet cleaning options for homes, businesses and professional spaces.
           </p>
+
         </div>
 
         <div class="services-grid">
 
           <div class="service-card">
-            <h3>Domestic Carpet Cleaning</h3>
+
+            <h3>
+              Domestic Carpet Cleaning
+            </h3>
 
             <p>
               Ideal for homes, flats, rental properties, end-of-tenancy cleaning,
@@ -805,10 +935,14 @@
               <li>Coverage within 30 miles included</li>
               <li>Over 30 miles charged at £1.20 per mile</li>
             </ul>
+
           </div>
 
           <div class="service-card">
-            <h3>Commercial Carpet Cleaning</h3>
+
+            <h3>
+              Commercial Carpet Cleaning
+            </h3>
 
             <p>
               Professional carpet cleaning for business premises, offices, retail spaces,
@@ -823,28 +957,106 @@
               <li>Flexible quotes based on site size</li>
               <li>Commercial travel distance available on request</li>
             </ul>
+
           </div>
 
         </div>
+
+      </div>
+    </section>
+
+    <!-- BEFORE & AFTER GALLERY -->
+
+    <section id="gallery" class="gallery-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <div class="eyebrow">
+            Recent Results
+          </div>
+
+          <h2>
+            Before & After
+          </h2>
+
+          <p>
+            See the difference professional carpet cleaning can make.
+          </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-card">
+
+            <div class="gallery-image-wrap">
+
+              <img
+                src="1.png"
+                alt="Carpet before professional cleaning by LVM Cleaning and Maintenance"
+              >
+
+              <span class="gallery-label">
+                Before
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-card">
+
+            <div class="gallery-image-wrap">
+
+              <img
+                src="2.png"
+                alt="Carpet after professional cleaning by LVM Cleaning and Maintenance"
+              >
+
+              <span class="gallery-label">
+                After
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
     <section id="packages">
+
       <div class="container">
+
         <div class="section-title">
-          <h2 class="price-heading">Prices from £86</h2>
+
+          <h2 class="price-heading">
+            Prices from £86
+          </h2>
+
           <p>
             Choose the level of clean that suits your home, rental property or commercial space.
           </p>
+
         </div>
 
         <div class="package-grid">
 
           <div class="package-card">
+
             <div class="tag-row"></div>
 
-            <h3>Basic</h3>
-            <p>Standard professional carpet clean.</p>
+            <h3>
+              Basic
+            </h3>
+
+            <p>
+              Standard professional carpet clean.
+            </p>
 
             <ul>
               <li>Standard carpet clean</li>
@@ -853,16 +1065,32 @@
               <li>Suitable for general maintenance cleans</li>
             </ul>
 
-            <a class="btn btn-outline" href="#contact">Enquire Now</a>
+            <a
+              class="btn btn-outline"
+              href="#contact"
+            >
+              Enquire Now
+            </a>
+
           </div>
 
           <div class="package-card featured">
+
             <div class="tag-row">
-              <span class="tag">Most Popular</span>
+
+              <span class="tag">
+                Most Popular
+              </span>
+
             </div>
 
-            <h3>Premium</h3>
-            <p>Clean and refresh with added fragrance options.</p>
+            <h3>
+              Premium
+            </h3>
+
+            <p>
+              Clean and refresh with added fragrance options.
+            </p>
 
             <ul>
               <li>Everything included in Basic</li>
@@ -871,14 +1099,26 @@
               <li>Ideal for homes with pets, children or odours</li>
             </ul>
 
-            <a class="btn btn-primary" href="#contact">Enquire Now</a>
+            <a
+              class="btn btn-primary"
+              href="#contact"
+            >
+              Enquire Now
+            </a>
+
           </div>
 
           <div class="package-card">
+
             <div class="tag-row"></div>
 
-            <h3>Premium Protect</h3>
-            <p>Full clean, refresh and added protection treatment.</p>
+            <h3>
+              Premium Protect
+            </h3>
+
+            <p>
+              Full clean, refresh and added protection treatment.
+            </p>
 
             <ul>
               <li>Everything included in Premium</li>
@@ -887,28 +1127,42 @@
               <li>Ideal for busy homes and high-traffic areas</li>
             </ul>
 
-            <a class="btn btn-outline" href="#contact">Enquire Now</a>
+            <a
+              class="btn btn-outline"
+              href="#contact"
+            >
+              Enquire Now
+            </a>
+
           </div>
 
         </div>
+
       </div>
     </section>
 
     <section>
+
       <div class="container">
+
         <div class="coverage-banner">
 
           <div>
-            <h2>Covering Lincolnshire, Cambridgeshire & South Norfolk</h2>
+
+            <h2>
+              Covering Lincolnshire, Cambridgeshire & South Norfolk
+            </h2>
 
             <p>
               LVM Cleaning and Maintenance provides domestic and commercial carpet cleaning
               across the surrounding areas, with clear travel terms for domestic bookings
               and commercial quotes handled individually.
             </p>
+
           </div>
 
           <div class="coverage-list">
+
             <ul>
               <li>Domestic jobs covered within 30 miles</li>
               <li>Additional domestic distance charged at £1.20 per mile</li>
@@ -916,42 +1170,72 @@
               <li>Professional machines and products used</li>
               <li>Appointments available 8:00am – 5:00pm</li>
             </ul>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <section id="trusted" class="trusted-section">
+
       <div class="container">
+
         <div class="trusted-strip">
-          <h2>Trusted by</h2>
+
+          <h2>
+            Trusted by
+          </h2>
 
           <div class="trusted-logos">
 
             <div class="trusted-logo">
-              <img src="BD_image.png" alt="BD logo">
+
+              <img
+                src="BD_image.png"
+                alt="BD logo"
+              >
+
             </div>
 
             <div class="trusted-logo">
-              <img src="JF_image.png" alt="JF logo">
+
+              <img
+                src="JF_image.png"
+                alt="JF logo"
+              >
+
             </div>
 
             <div class="trusted-logo">
-              <img src="Ravelin_image.png" alt="Ravelin logo">
+
+              <img
+                src="Ravelin_image.png"
+                alt="Ravelin logo"
+              >
+
             </div>
 
           </div>
+
         </div>
+
       </div>
     </section>
 
     <section id="contact">
+
       <div class="container contact">
+
         <div class="contact-grid">
 
           <div class="contact-info">
-            <h3>Get a free quote</h3>
+
+            <h3>
+              Get a free quote
+            </h3>
 
             <p>
               Send a message with your location, the rooms you need cleaned and whether
@@ -965,25 +1249,50 @@
 
             <p>
               <strong>Phone:</strong>
-              <a href="tel:07973233176">07973 233176</a>
+
+              <a href="tel:07973233176">
+                07973 233176
+              </a>
+
             </p>
 
             <p>
               <strong>Email:</strong>
-              <a href="mailto:luke@lvmclean.co.uk">luke@lvmclean.co.uk</a>
+
+              <a href="mailto:luke@lvmclean.co.uk">
+                luke@lvmclean.co.uk
+              </a>
+
             </p>
 
             <p>
               <strong>WhatsApp:</strong>
-              <a href="https://wa.me/447973233176" target="_blank">Message on WhatsApp</a>
+
+              <a
+                href="https://wa.me/447973233176"
+                target="_blank"
+              >
+                Message on WhatsApp
+              </a>
+
             </p>
 
             <p>
               <strong>Facebook:</strong>
-              <a href="https://www.facebook.com/profile.php?id=61583526895272" target="_blank">Visit Facebook page</a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61583526895272"
+                target="_blank"
+              >
+                Visit Facebook page
+              </a>
+
             </p>
 
-            <div class="cta-row" style="margin-top: 22px;">
+            <div
+              class="cta-row"
+              style="margin-top: 22px;"
+            >
 
               <a
                 class="btn btn-primary"
@@ -994,17 +1303,30 @@
                 Book Free Consultation
               </a>
 
-              <a class="btn btn-primary whatsapp-bottom" href="https://wa.me/447973233176" target="_blank">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/447973233176"
+                target="_blank"
+              >
                 WhatsApp
               </a>
 
-              <a class="btn btn-outline" href="mailto:luke@lvmclean.co.uk">
+              <a
+                class="btn btn-primary"
+                href="mailto:luke@lvmclean.co.uk"
+              >
                 Email
               </a>
+
             </div>
+
           </div>
 
-          <form action="mailto:luke@lvmclean.co.uk" method="post" enctype="text/plain">
+          <form
+            action="mailto:luke@lvmclean.co.uk"
+            method="post"
+            enctype="text/plain"
+          >
 
             <input
               type="text"
@@ -1033,11 +1355,27 @@
             >
 
             <select name="service">
-              <option value="">Select a service</option>
-              <option value="Domestic Basic">Domestic - Basic</option>
-              <option value="Domestic Premium">Domestic - Premium</option>
-              <option value="Domestic Premium Protect">Domestic - Premium Protect</option>
-              <option value="Commercial">Commercial quote</option>
+
+              <option value="">
+                Select a service
+              </option>
+
+              <option value="Domestic Basic">
+                Domestic - Basic
+              </option>
+
+              <option value="Domestic Premium">
+                Domestic - Premium
+              </option>
+
+              <option value="Domestic Premium Protect">
+                Domestic - Premium Protect
+              </option>
+
+              <option value="Commercial">
+                Commercial quote
+              </option>
+
             </select>
 
             <textarea
@@ -1045,22 +1383,29 @@
               placeholder="Tell us what you need cleaned, number of rooms, stains, pets, parking access, and preferred dates."
             ></textarea>
 
-            <button class="btn btn-primary" type="submit">
+            <button
+              class="btn btn-primary"
+              type="submit"
+            >
               Send Enquiry
             </button>
 
           </form>
 
         </div>
+
       </div>
+
     </section>
 
   </main>
 
   <footer>
+
     <div class="container">
       © 2026 LVM Cleaning and Maintenance. Carpet cleaning across Lincolnshire, Cambridgeshire, South Norfolk and surrounding areas.
     </div>
+
   </footer>
 
 </body>
